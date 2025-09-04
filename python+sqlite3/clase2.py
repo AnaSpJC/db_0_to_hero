@@ -16,3 +16,16 @@ with sqlite3.connect("mi_base.db") as conexion:
       )
   """)
   print("Tabla 'personas' creada con éxito")
+
+# Prueba extra: Cambiá el nombre de la tabla y volvé a ejecutar. => crea tablas nuevas
+# Uso este mini inspector que busca nombre de tablas en mi_base.db
+with sqlite3.connect("mi_base.db") as conexion:
+  cursor = conexion.cursor()
+  cursor.execute("SELECT name FROM sqlite_master WHERE type ='table'")
+  tablas = cursor.fetchall()
+  print("Tablas en la base de datos")
+  for tabla in tablas:
+    print(tabla[0]) 
+
+# ¿Qué pasa si quitás IF NOT EXISTS y la tabla ya existe? Tira error:
+#   sqlite3.OperationalError: table personas already exists
