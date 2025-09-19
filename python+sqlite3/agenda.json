@@ -1,0 +1,47 @@
+[
+    {
+        "dni": "12345678",
+        "nombre": "Ana",
+        "edad": 30
+    },
+    {
+        "dni": "10000000",
+        "nombre": "persona1",
+        "edad": 30
+    },
+    {
+        "dni": "10000001",
+        "nombre": "persona1",
+        "edad": 31
+    },
+    {
+        "dni": "10000002",
+        "nombre": "persona2",
+        "edad": 32
+    },
+    {
+        "dni": "10000003",
+        "nombre": "persona03",
+        "edad": 33
+    },
+    {
+        "dni": "10000004",
+        "nombre": "persona4",
+        "edad": 34
+    },
+    {
+        "dni": "20000000",
+        "nombre": "persona20",
+        "edad": 20
+    },
+    {
+        "dni": "20000001",
+        "nombre": "persona20-1",
+        "edad": 21
+    },
+    {
+        "dni": "20000002",
+        "nombre": "persona20-2",
+        "edad": 22
+    }
+]
