@@ -1,0 +1,17 @@
+[
+    {
+        "dni": "12345678",
+        "nombre": "Ana",
+        "edad": 30
+    },
+    {
+        "dni": "87654321",
+        "nombre": "Luis",
+        "edad": 25
+    },
+    {
+        "dni": "44444444",
+        "nombre": "Lucia",
+        "edad": 28
+    }
+]
