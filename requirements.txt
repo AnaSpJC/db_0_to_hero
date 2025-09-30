@@ -1,6 +1,25 @@
-numpy==2.3.3
-pandas==2.3.2
+# 📦 Dependencias técnicas del proyecto
+# 🗂️ Archivo: requirements.txt
+# ✍️ Autoría: Ana Sposito
+# 🗓️ Fecha: [completar]
+
+# 🔧 Librerías principales
+numpy==2.3.3              # Operaciones numéricas y estructuras de arrays
+pandas==2.3.2             # Manipulación de datos tabulares
+
+# 📄 Lectura de archivos Excel
+openpyxl==3.1.5           # Motor para leer archivos .xlsx
+et_xmlfile==2.0.0         # Soporte interno para estructuras XML en archivos Excel
+
+# 📅 Manejo de fechas y zonas horarias
 python-dateutil==2.9.0.post0
 pytz==2025.2
-six==1.17.0
 tzdata==2025.2
+six==1.17.0               # Compatibilidad entre versiones de Python
+
+# 🧠 Notas curadas:
+# - Las versiones están fijadas para asegurar reproducibilidad.
+# - Este archivo puede ser usado con `pip install -r requirements.txt`.
+# - Se recomienda mantenerlo sincronizado con el entorno virtual.
+# - `openpyxl` y `et_xmlfile` son necesarios para trabajar con archivos Excel (.xlsx).
+
