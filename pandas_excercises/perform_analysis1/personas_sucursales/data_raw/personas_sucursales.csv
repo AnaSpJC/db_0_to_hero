@@ -1,0 +1,21 @@
+Nombre,Edad,Sucursal
+" juan",35,Córdoba
+"MARIA ",-5,Rosario
+"peDro","veinte",Mendoza
+"123",40,Córdoba
+,28,Buenos Aires
+"Ana",30,Buenos Aires
+"Sofía",16,Rosario
+"Tomás",22,Mendoza
+"Valentina",20,Córdoba
+"Federico",18,Salta
+"Agustina",30,Buenos Aires
+"Nicolás",21,Rosario
+"Martina",27,Mendoza
+"Lucía",19,Córdoba
+"Carlos",45,Salta
+"José",65,Buenos Aires
+"mara",None,Rosario
+"LUIS",25,Mendoza
+"  error",120,Córdoba
+"Laura",None,Buenos Aires
