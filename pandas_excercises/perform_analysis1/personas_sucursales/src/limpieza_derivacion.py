@@ -67,8 +67,43 @@ df_validos = df[
     (df["Nombre_limpio"] != "Nombre inválido") &
     (df["Edad_valida"].notnull())]
 
-print(df_validos) # validados pero no limpios
+#print(df_validos) # validados pero no limpios
 # Seleccionar columnas limpias
 df_entrega = df_validos[["Nombre_limpio", "Edad_valida", "Sucursal", "Mayor", "Rango etario"]]
-print(df_entrega)
+
 #df_entrega.to_excel("../outputs/personas_limpias.xlsx", index=False)
+
+# Filtrar registros descartados
+df_descartados = df[
+    (df["Nombre_limpio"] == "Nombre inválido") |
+    (df["Edad_valida"].isnull())
+]
+
+# Exportar archivo técnico
+#df_descartados.to_excel("../outputs/personas_descartadas.xlsx", index=False)
+
+# Crear resumen para cliente no técnico
+df_descartes_cliente = df[
+    (df["Nombre_limpio"] == "Nombre inválido") |
+    (df["Edad_valida"].isnull())
+][["Nombre", "Edad"]].copy()
+
+# Agregar motivo de descarte
+def motivo(row):
+    if row["Edad"] is None or pd.isna(row["Edad"]):
+        return "Edad nula"
+    try:
+        if int(row["Edad"]) <= 0:
+            return "Edad negativa"
+    except:
+        return "Edad no convertible"
+    if not isinstance(row["Nombre"], str) or not row["Nombre"].strip().isalpha():
+        return "Nombre no alfabético"
+    return "Otro"
+
+df_descartes_cliente["Motivo de descarte"] = df_descartes_cliente.apply(motivo, axis=1)
+
+# Exportar
+#df_descartes_cliente.to_excel("../outputs/registros_descartados_cliente.xlsx", index=False)
+
+
