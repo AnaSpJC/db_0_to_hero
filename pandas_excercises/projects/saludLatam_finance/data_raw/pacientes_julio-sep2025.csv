@@ -1,0 +1,36 @@
+ID,Nombre,Edad,Fecha_Ingreso,Cobertura,Monto
+001,Laura Ruiz,45,2025-07-02,Prepaga A,2500.00
+002,Juan Pérez,60,2025-07-05,Obra Social B,3100.00
+003,María Gómez,30,2025-07-08,Prepaga A,1800.00
+004,Carlos Díaz,52,2025-07-10,Prepaga B,2900.00
+005,Ana Torres,38,2025-07-12,Obra Social A,2200.00
+006,Pedro López,45,2025-07-15,Prepaga A,2500.00
+007,Lucía Méndez,29,2025-07-18,Prepaga C,1700.00
+008,Martín Silva,60,2025-07-20,Obra Social B,3100.00
+009,Valeria Soto,33,2025-07-22,Prepaga A,2100.00
+010,Diego Rivas,41,2025-07-25,Prepaga B,2600.00
+011,Carla Núñez,50,2025-07-28,Obra Social A,2800.00
+012,Esteban Paz,39,2025-07-30,Prepaga C,2300.00
+013,Florencia Gil,27,2025-08-01,Prepaga A,1600.00
+014,Gonzalo Vera,45,2025-08-03,Prepaga A,2500.00
+015,Romina Acosta,34,2025-08-05,Obra Social B,2000.00
+016,Daniela Ponce,60,2025-08-07,Prepaga B,3100.00
+017,Marcelo Funes,52,2025-08-09,Obra Social A,2900.00
+018,Julieta Roldán,38,2025-08-11,Prepaga C,2200.00
+019,Tomás Aguirre,33,2025-08-13,Prepaga A,2100.00
+020,Paula Medina,41,2025-08-15,Prepaga B,2600.00
+021,Carla Núñez,50,2025-07-28,Obra Social A,2800.00
+022,Esteban Paz,39,2025-07-30,Prepaga C,2300.00
+023,,27,2025-08-17,Prepaga A,1600.00
+024,Gonzalo Vera,45,2025-08-19,Prepaga A,
+025,Romina Acosta,34,2025-08-21,Obra Social B,2000.00
+026,Laura Ruiz,45,2025-09-01,Prepaga A,2500.00
+027,Juan Pérez,60,2025-09-03,Obra Social B,3100.00
+028,María Gómez,30,2025-09-05,Prepaga A,1800.00
+029,Carlos Díaz,52,2025-09-07,Prepaga B,2900.00
+030,Ana Torres,38,2025-09-09,Obra Social A,2200.00
+031,Pedro López,45,2025-09-11,Prepaga A,2500.00
+032,Lucía Méndez,29,2025-09-13,Prepaga C,1700.00
+033,Martín Silva,60,2025-09-15,Obra Social B,3100.00
+034,Valeria Soto,33,2025-09-17,Prepaga A,2100.00
+035,Diego Rivas,41,2025-09-19,Prepaga B,2600.00

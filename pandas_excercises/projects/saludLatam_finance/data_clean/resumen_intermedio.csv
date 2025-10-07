@@ -1,0 +1,34 @@
+ID,Nombre,Edad,Fecha_Ingreso,Cobertura,Mes_Ingreso
+1,Laura Ruiz,45,02/07/2025,Prepaga A,July
+2,Juan Pérez,60,05/07/2025,Obra Social B,July
+3,María Gómez,30,08/07/2025,Prepaga A,July
+4,Carlos Díaz,52,10/07/2025,Prepaga B,July
+5,Ana Torres,38,12/07/2025,Obra Social A,July
+6,Pedro López,45,15/07/2025,Prepaga A,July
+7,Lucía Méndez,29,18/07/2025,Prepaga C,July
+8,Martín Silva,60,20/07/2025,Obra Social B,July
+9,Valeria Soto,33,22/07/2025,Prepaga A,July
+10,Diego Rivas,41,25/07/2025,Prepaga B,July
+11,Carla Núñez,50,28/07/2025,Obra Social A,July
+21,Carla Núñez,50,28/07/2025,Obra Social A,July
+12,Esteban Paz,39,30/07/2025,Prepaga C,July
+22,Esteban Paz,39,30/07/2025,Prepaga C,July
+13,Florencia Gil,27,01/08/2025,Prepaga A,August
+14,Gonzalo Vera,45,03/08/2025,Prepaga A,August
+15,Romina Acosta,34,05/08/2025,Obra Social B,August
+16,Daniela Ponce,60,07/08/2025,Prepaga B,August
+17,Marcelo Funes,52,09/08/2025,Obra Social A,August
+18,Julieta Roldán,38,11/08/2025,Prepaga C,August
+19,Tomás Aguirre,33,13/08/2025,Prepaga A,August
+20,Paula Medina,41,15/08/2025,Prepaga B,August
+25,Romina Acosta,34,21/08/2025,Obra Social B,August
+26,Laura Ruiz,45,01/09/2025,Prepaga A,September
+27,Juan Pérez,60,03/09/2025,Obra Social B,September
+28,María Gómez,30,05/09/2025,Prepaga A,September
+29,Carlos Díaz,52,07/09/2025,Prepaga B,September
+30,Ana Torres,38,09/09/2025,Obra Social A,September
+31,Pedro López,45,11/09/2025,Prepaga A,September
+32,Lucía Méndez,29,13/09/2025,Prepaga C,September
+33,Martín Silva,60,15/09/2025,Obra Social B,September
+34,Valeria Soto,33,17/09/2025,Prepaga A,September
+35,Diego Rivas,41,19/09/2025,Prepaga B,September
