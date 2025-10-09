@@ -7,16 +7,24 @@
 numpy==2.3.3              # Operaciones numéricas y estructuras de arrays
 pandas==2.3.2             # Manipulación de datos tabulares
 
+# 🗃️ Bases de datos y conexión SQL
+sqlalchemy==2.0.43        # ORM para interacción con bases de datos
+psycopg2-binary==2.9.10   # Conector PostgreSQL optimizado para producción
+greenlet==3.2.4           # Soporte interno para concurrencia en SQLAlchemy
+
 # 📄 Lectura y escritura de archivos Excel
 openpyxl==3.1.5           # Motor para leer archivos .xlsx
 et_xmlfile==2.0.0         # Soporte interno para estructuras XML en archivos Excel
 XlsxWriter==3.2.0         # Motor alternativo para exportación Excel con formato profesional
 
 # 📅 Manejo de fechas y zonas horarias
-python-dateutil==2.9.0.post0
-pytz==2025.2
-tzdata==2025.2
-six==1.17.0               # Compatibilidad entre versiones de Python
+python-dateutil==2.9.0.post0  # Utilidades para fechas y parsing flexible
+pytz==2025.2                  # Zonas horarias estándar
+tzdata==2025.2                # Base de datos de zonas horarias
+six==1.17.0                   # Compatibilidad entre versiones de Python
+
+# 🧩 Compatibilidad y extensiones
+typing-extensions==4.15.0     # Tipado extendido para versiones anteriores de Python
 
 # 🧠 Notas curadas:
 # - Las versiones están fijadas para asegurar reproducibilidad.
@@ -24,3 +32,4 @@ six==1.17.0               # Compatibilidad entre versiones de Python
 # - Se recomienda mantenerlo sincronizado con el entorno virtual.
 # - `openpyxl` y `et_xmlfile` son necesarios para trabajar con archivos Excel (.xlsx).
 # - `XlsxWriter` permite aplicar formato profesional a hojas Excel desde código.
+# - `sqlalchemy` y `psycopg2-binary` permiten conexión robusta con bases PostgreSQL.
