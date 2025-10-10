@@ -28,8 +28,8 @@ La contraseña contiene caracteres especiales (`!`, `@`, `$`) que rompen el form
 
 Codificar la contraseña usando [URL encoding](https://www.w3schools.com/tags/ref_urlencode.asp):
 
-- `!` → `%21`
-- `@` → `%40`
+- `!` → `%21`  
+- `@` → `%40`  
 - `$` → `%24`
 
 **URI corregida (con contraseña simulada codificada):**
@@ -76,7 +76,53 @@ Esta URI permite conexiones desde entornos como Codespaces, Colab, o máquinas l
 
 ---
 
-## 📘 Versión en inglés (for collaborators or bilingual documentation)
+## 🧩 Problema 3: Tabla `log_limpieza` no aparece en Supabase
+
+### ❌ Error observado
+
+El módulo muestra:
+```
+📝 Auditoría registrada en log_limpieza.
+```
+Pero en Supabase, la tabla `log_limpieza` no aparece. El panel indica:
+> "This table doesn't exist in your database"
+
+### 🔍 Diagnóstico
+
+El bloque de auditoría usaba `engine.connect()` sin transacción explícita. En Supabase (PostgreSQL en modo pooler), los comandos como `CREATE TABLE` no se persisten si no están dentro de una transacción. El motor puede aceptar el comando, pero no lo guarda.
+
+### ✅ Solución
+
+Usar una transacción explícita para garantizar persistencia:
+
+```python
+with engine.connect() as conn:
+    trans = conn.begin()
+    try:
+        conn.execute(text("""
+            CREATE TABLE IF NOT EXISTS log_limpieza (
+                id SERIAL PRIMARY KEY,
+                fecha TIMESTAMP,
+                accion TEXT
+            )
+        """))
+        conn.execute(text("""
+            INSERT INTO log_limpieza (fecha, accion)
+            VALUES (:fecha, :accion)
+        """), {
+            "fecha": datetime.today().strftime("%Y-%m-%d %H:%M:%S"),
+            "accion": "Eliminados X registros inválidos"
+        })
+        trans.commit()
+    except:
+        trans.rollback()
+```
+
+> ✅ Alternativamente, usar `with engine.begin()` también garantiza commit automático.
+
+---
+
+## 📘 English version (for collaborators or bilingual documentation)
 
 ### 🧩 Issue 1: Special characters breaking SQLAlchemy URI
 
@@ -114,3 +160,29 @@ connection to server at "...supabase.co" failed: Network is unreachable
 ```python
 postgresql://postgres.xxxxxx:MiCl%40ve%24Segura%21@aws-1-sa-east-1.pooler.supabase.com:6543/postgres
 ```
+
+---
+
+### 🧩 Issue 3: Table `log_limpieza` not visible in Supabase
+
+**Error:**
+```text
+Audit log says "registered", but table is missing in Supabase UI.
+```
+
+**Cause:** Table creation was executed outside a transaction. Supabase (PostgreSQL pooler) requires explicit transaction for DDL persistence.
+
+**Fix:** Wrap `CREATE TABLE` and `INSERT` inside a transaction:
+
+```python
+with engine.connect() as conn:
+    trans = conn.begin()
+    try:
+        conn.execute(text("CREATE TABLE IF NOT EXISTS log_limpieza (...)"))
+        conn.execute(text("INSERT INTO log_limpieza (...) VALUES (...)"))
+        trans.commit()
+    except:
+        trans.rollback()
+```
+
+> ✅ Alternatively, use `with engine.begin()` for automatic commit.
